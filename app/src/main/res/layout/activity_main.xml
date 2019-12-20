@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#f7f7f7"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/zipview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="display nickname"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center|left">
+
+        <ImageView
+            android:id="@+id/zipview_back_btn"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/zipview_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="52dp"
+        android:background="#e6e6e6" />
+    <GridView
+        android:id="@+id/zipview_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_below="@id/zipview_view"
+        android:layout_above="@+id/btn_add_zipfile"
+        />
+    <!--    android:drawSelectorOnTop="true"-->
+    <Button
+        android:id="@+id/btn_add_zipfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
+        android:text="등록"
+        android:textSize="20sp"
+        android:background="@drawable/ic_launcher_background"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+    <LinearLayout
+        android:id="@+id/zipview_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2D000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone">
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
